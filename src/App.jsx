@@ -99,7 +99,7 @@ export default function App() {
       const token = localStorage.getItem('lms_token');
       if (!token) return;
 
-      const res = await fetch('http://localhost:5000/api/courses', { headers: { 'Authorization': `Bearer ${token}` } });
+      const res = await fetch('https://crack-be-bagussam-production.up.railway.app/api/courses', { headers: { 'Authorization': `Bearer ${token}` } });
       if (res.ok) {
         const serverData = await res.json();
         const serverCourses = Array.isArray(serverData?.data) ? serverData.data : [];
@@ -134,7 +134,7 @@ export default function App() {
     try {
       const token = localStorage.getItem('lms_token');
       
-      const res = await fetch('http://localhost:5000/api/courses', {
+      const res = await fetch('https://crack-be-bagussam-production.up.railway.app/api/courses', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ export default function App() {
     try {
       const token = localStorage.getItem('lms_token');
       
-      const res = await fetch(`http://localhost:5000/api/courses/${targetCourseId}/modules`, {
+      const res = await fetch(`https://crack-be-bagussam-production.up.railway.app/api/courses/${targetCourseId}/modules`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -300,7 +300,7 @@ export default function App() {
 
     try {
       const token = localStorage.getItem('lms_token');
-      const res = await fetch(`http://localhost:5000/api/enrollments/${enrollmentId}/exam`, {
+      const res = await fetch(`https://crack-be-bagussam-production.up.railway.app/api/enrollments/${enrollmentId}/exam`, {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json',
