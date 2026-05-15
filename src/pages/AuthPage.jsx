@@ -97,9 +97,12 @@ export default function AuthPage() {
         {/* --- 1. LOGIN VIEW --- */}
         {authView === 'login' && (
           <form onSubmit={onSubmitLogin} className="space-y-4 animate-in fade-in duration-300">
-            <input name="email" type="email" required placeholder={`${getText('emailHolder')} *`} defaultValue="guru@lms.com" className="w-full px-5 py-4 rounded-2xl border dark:bg-slate-800 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500 font-bold" />
+            {/* defaultValue TELAH DIHAPUS DARI SINI */}
+            <input name="email" type="email" required placeholder={`${getText('emailHolder')} *`} className="w-full px-5 py-4 rounded-2xl border dark:bg-slate-800 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500 font-bold" />
+            
             <div className="relative">
-              <input name="password" type={showLoginPassword ? "text" : "password"} required placeholder={`${getText('passHolder')} *`} defaultValue="password123" className="w-full px-5 py-4 pr-12 rounded-2xl border dark:bg-slate-800 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500 font-bold" />
+              {/* defaultValue TELAH DIHAPUS DARI SINI */}
+              <input name="password" type={showLoginPassword ? "text" : "password"} required placeholder={`${getText('passHolder')} *`} className="w-full px-5 py-4 pr-12 rounded-2xl border dark:bg-slate-800 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-500 font-bold" />
               <button type="button" onClick={() => setShowLoginPassword(!showLoginPassword)} className="absolute right-4 top-1/2 -translate-y-1/2 opacity-40 hover:opacity-100">
                 {showLoginPassword ? <EyeOff size={20} /> : <Eye size={20} />}
               </button>
